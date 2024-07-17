@@ -4,10 +4,11 @@
 La presenta API REST tiene una funcionalidad que se va actualizando con mejoras. En principio la API REST de Foro tiene 4 entidades principales:
 
 > [CURSO]
+> ---
 > La misma cuenta con una funcionalidad CRUD, donde pueden crearse nuevos cursos, con una descripción String con la propiedad `nombre` y una `categoría` que es un enum para unificar temáticas.
 
   
- ** Request de ejemplo: **
+ **Request de ejemplo:**
 ```
 {
     "nombre": "Foro 1707 951 prueba",
@@ -16,10 +17,11 @@ La presenta API REST tiene una funcionalidad que se va actualizando con mejoras.
 ```
 
 > [TOPICO]
+> ---
 > La misma cuenta con una funcionalidad CRUD, donde pueden crearse nuevos Topicos, con una descripción String con la propiedad `titulo` y un `mensaje`. La propiedad `cursoId` esta linkeada con la entidad Curso.
 
   
- ** REQUEST de ejemplo:**
+ **REQUEST de ejemplo:**
 ```
 {
     "titulo": "Problema con Hibernate",
@@ -28,7 +30,7 @@ La presenta API REST tiene una funcionalidad que se va actualizando con mejoras.
 }
 ```
 
- *** RESPONSE de ejemplo: En la respuesta nos devuelve de manera automática, la fecha de `creado`, el `estado` y el `autorId` de la persona que creo el Topico***
+ ***RESPONSE de ejemplo:** En la respuesta nos devuelve de manera automática, la fecha de `creado`, el `estado` y el `autorId` de la persona que creo el Topico***
 ```
 
 {
@@ -44,10 +46,11 @@ La presenta API REST tiene una funcionalidad que se va actualizando con mejoras.
 ```
 
 > [RESPUESTA]
+> ---
 > En Desarrollo
 
   
- *** Request de ejemplo:***
+ **Request de ejemplo:**
 ```
 {
     "nombre": "Foro 1707 951 prueba",
@@ -56,10 +59,11 @@ La presenta API REST tiene una funcionalidad que se va actualizando con mejoras.
 ```
 
 > [USUARIO]
+> ---
 > la misma cuenta con una funcionalidad CRUD, donde pueden crearse nuevos cursos, con una descripción String con la propiedad `nombre` y una `categoría` que es un enum para unificar temáticas.
 
   
- *** Request de ejemplo:***
+ **Request de ejemplo:**
 ```
 {
     "mensaje": "Tengo un problema al configurar Hibernate con Spring Boot.",
@@ -68,7 +72,13 @@ La presenta API REST tiene una funcionalidad que se va actualizando con mejoras.
 }
 ```
 
----
+
+
+
+> [!TIP]
+> Diagrama de entidades: https://drive.google.com/file/d/11ZNsmc9AuEuFJ8UNzLqMWMFykpln4oLf/view?usp=sharing
+
+--
 ## Autores
 Claudio CGG
 
