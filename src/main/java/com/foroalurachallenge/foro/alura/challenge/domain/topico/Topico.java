@@ -28,18 +28,19 @@ public class Topico {
     private String mensaje;
     private LocalDateTime creado;
 
-    @NotBlank
     @Column(nullable = false)
     @Enumerated(EnumType.STRING)
-    private Estado estado;
+    private Estado estado = Estado.NUEVO;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "usuario_apodo")
+    @JoinColumn(name = "usuario_id")
     private Usuario autor;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "curso_id")
     private Curso curso;
+
+
 
 
 }

@@ -56,5 +56,19 @@ public class TokenService {
         }
 
     }
+
+    public Long getUserIdFromToken(String token) {
+        try {
+            Algorithm algorithm = Algorithm.HMAC256("apiSecret");
+            JWTVerifier verifier = JWT.require(algorithm)
+                    .withIssuer("Foro Alura Challenge")
+                    .build();
+            DecodedJWT decodedJWT = verifier.verify(token);
+            return decodedJWT.getClaim("id").asLong();
+        } catch (JWTVerificationException exception) {
+            throw new RuntimeException("Verifier inválido");
+        }
+    }
+
 }
 
