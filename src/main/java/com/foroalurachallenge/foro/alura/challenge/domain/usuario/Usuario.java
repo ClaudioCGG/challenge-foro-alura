@@ -2,6 +2,7 @@ package com.foroalurachallenge.foro.alura.challenge.domain.usuario;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.Future;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
@@ -40,7 +41,11 @@ public class Usuario implements UserDetails {
     private String apodo;
     @NotNull
     private Boolean activo;
+
+    @NotNull
+    @Future
     private LocalDateTime alta;
+
     private String fotoPerfil;
 
     @NotBlank
