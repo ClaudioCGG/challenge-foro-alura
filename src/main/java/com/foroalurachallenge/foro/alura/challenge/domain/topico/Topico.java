@@ -34,7 +34,7 @@ public class Topico {
     private Estado estado;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "medico_apodo")
+    @JoinColumn(name = "usuario_apodo")
     private Usuario autor;
 
     @ManyToOne(fetch = FetchType.LAZY)
